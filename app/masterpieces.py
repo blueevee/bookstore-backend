@@ -64,7 +64,7 @@ def edit_masterpiecie(pk):
     except:
         return {'message': 'Obra não encontrada.'}, 404
     current_app.db.session.commit()
-    return {'Obra atualizada': result}
+    return {'message':'Obra atualizada!','book': result}
 
 # [POST] /upload-obras: está rota deverá receber um arquivo csv contendo os mesmos parâmetros da rota anterior mas podendo ser salvo em massa no banco de dados
 # [POST] /file-obras/ : A rota deverá solicitar um email e após enviar uma solicitação para uma Fila de Mensagens gerando um arquivo contendo todos as obras cadastradas que seja enviado para o e-mail informado.

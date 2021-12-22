@@ -16,8 +16,7 @@ class MasterpieceSchema(SQLAlchemyAutoSchema):
     id = fields.Int(required=False)
     title = fields.Str(required=True)
     company = fields.Str(required=True)
-    company = fields.Str(required=False)
-    image = fields.Str(required=False)
+    image = fields.Str(required=True)
     authors = fields.Str(required=True)
     
     class Meta:
@@ -28,4 +27,4 @@ class MasterpieceSchema(SQLAlchemyAutoSchema):
 
     @validates('id')
     def validate_id(self, value):
-        raise ValidationError('Não envie pelo amor de deus o ID')
+        raise ValidationError('Tá enviando ID pra que?? PARE AGORA')
