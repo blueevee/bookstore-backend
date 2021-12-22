@@ -3,16 +3,10 @@
 [del-image]: https://img.shields.io/badge/-DELETE-critical
 [put-image]: https://img.shields.io/badge/-PUT-blue
 # Backend para uma livraria fictícia me**a
-## Rodar o projeto localmente
-```sh
-export FLASK_APP=app.app
-export FLASK_ENV=Development
-flask run
-```
+
 ## tasks
 - [X] Estrutura inicial do crud
 - [X] Fazer testes
-- [ ] Ver como está rolando pro pytest ter um db dele e derrubar apos os testes
 - [ ] Colocar pra rodar no docker
 - [ ] Concluir rota que depende do envio de arquivos
 - [ ] Consluir rota que envia email
@@ -52,10 +46,3 @@ flask run
 
 ### ![PUT][put-image] */obras/:id*
 > Edita uma obra da base
-
-========
-
-coverage run --source=app -m pytest -s tests/
-coverage report
-coverege html
-chrome htmlcov/index.html
